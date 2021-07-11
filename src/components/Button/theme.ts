@@ -12,7 +12,7 @@ export const light: ButtonTheme = {
     borderColorHover: "currentColor",
     boxShadow: "inset 0px -1px 0px rgba(14, 14, 44, 0.4)",
     boxShadowActive: "inset 0px -1px 0px rgba(14, 14, 44, 0.4)",
-    color: "#FFFFFF",
+    color: "#333335",
   },
   [SECONDARY]: {
     background: "transparent",
@@ -88,11 +88,12 @@ export const dark: ButtonTheme = {
     background: darkColors.tertiary,
     backgroundActive: darkColors.tertiary,
     backgroundHover: darkColors.tertiary,
-    color: darkColors.primary,
+    color: darkColors.text,
   },
   [TEXT]: {
     ...light.text,
     backgroundHover: darkColors.tertiary,
+    color: darkColors.text,
   },
   [DANGER]: {
     ...light.danger,
