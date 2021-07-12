@@ -195,11 +195,11 @@ StyledButton.defaultProps = {
 };
 var templateObject_1$I;
 
-var Button = function (_a) {
-    var startIcon = _a.startIcon, endIcon = _a.endIcon, children = _a.children, external = _a.external, isLoading = _a.isLoading, disabled = _a.disabled; __rest(_a, ["startIcon", "endIcon", "children", "external", "isLoading", "disabled"]);
+var Button = function (props) {
+    var startIcon = props.startIcon, endIcon = props.endIcon, external = props.external; props.className; var isLoading = props.isLoading, disabled = props.disabled, children = props.children, rest = __rest(props, ["startIcon", "endIcon", "external", "className", "isLoading", "disabled", "children"]);
     var internalProps = external ? getExternalLinkProps() : {};
     var isDisabled = isLoading || disabled;
-    return (React__default['default'].createElement(StyledButton, __assign({}, internalProps, { isLoading: isLoading, disabled: isDisabled }),
+    return (React__default['default'].createElement(StyledButton, __assign({}, internalProps, rest, { isLoading: isLoading, disabled: isDisabled }),
         React__default['default'].isValidElement(startIcon) &&
             React__default['default'].cloneElement(startIcon, {
                 mr: "0.5rem",
@@ -2084,7 +2084,7 @@ var MenuButton = styled__default['default'](Button)(templateObject_1$d || (templ
 });
 MenuButton.defaultProps = {
     variant: "text",
-    size: "md",
+    size: "sm",
 };
 var templateObject_1$d;
 
